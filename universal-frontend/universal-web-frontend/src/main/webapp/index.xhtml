@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<c:set var="pc" value="#{indexController}" />
+
+<h:head>
+	<title>SLAG-Demo Basic Webgui</title>
+</h:head>
+<h:body>
+	<div>
+		<h:link value="Home" outcome="index" style="margin-right: 5px ;" />
+		<h:link value="data" outcome="data" style="margin-right: 5px ;" />
+		<h:link value="config" outcome="config" style="margin-right: 5px ;" />
+	</div>
+	<h:form>
+		<div>
+			<p:commandButton value="SUBMIT" action="#{pc.submit}" ajax="false" />
+		</div>
+		<div>
+			<p:inputTextarea rows="20" readonly="true"
+				style="width:100%;font-family:monospace" value="#{pc.result}" />
+		</div>
+		<h:outputText value="#{pc.version}" />
+	</h:form>
+
+</h:body>
+</html>
