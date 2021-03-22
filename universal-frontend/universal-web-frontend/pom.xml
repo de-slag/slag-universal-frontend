@@ -127,7 +127,7 @@
 
 	</dependencies>
 	<build>
-		<finalName>slag-basic-webgui</finalName>
+		<finalName>universal-web-frontend</finalName>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
 				defaults (may be moved to parent pom) -->
 			<plugins>
